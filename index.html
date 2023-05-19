@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Helper</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>JavaScript Helper</h1>
+
+    <h2>console.log()</h2>
+    <p>The <code>console.log()</code> method is used to print messages to the console.</p>
+    <pre><code>console.log('Hello, world!');</code></pre>
+
+    <h2>Variables</h2>
+    <p>Variables are used to store data values in JavaScript.</p>
+    <pre><code>var name = 'John';
+var age = 25;</code></pre>
+
+    <h2>Primitive Types</h2>
+    <p>JavaScript has several primitive types, including <code>string</code>, <code>number</code>, <code>boolean</code>,
+        <code>null</code>, and <code>undefined</code>.</p>
+    <pre><code>var name = 'John';
+var age = 25;
+var isStudent = true;
+var nothing = null;
+var something = undefined;</code></pre>
+
+    <h2>Logical Comparison Operators</h2>
+    <p>JavaScript has logical comparison operators such as <code>==</code>, <code>!=</code>, <code>===</code>,
+        <code>!==</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>.</p>
+    <pre><code>var x = 5;
+var y = 10;
+console.log(x &lt; y); // Output: true</code></pre>
+
+    <h2>Conditional Statements</h2>
+    <p>Conditional statements allow you to perform different actions based on different conditions.</p>
+    <pre><code>var age = 20;
+if (age &gt;= 18) {
+  console.log('You are an adult.');
+} else {
+  console.log('You are a minor.');
+}</code></pre>
+
+    <h2>Arrays</h2>
+    <p>Arrays are used to store multiple values in a single variable.</p>
+    <pre><code>var numbers = [1, 2, 3, 4, 5];
+console.log(numbers[2]); // Output: 3</code></pre>
+
+    <h2>Iteration</h2>
+    <p>Iteration allows you to repeat a block of code multiple times.</p>
+    <pre><code>for (var i = 0; i &lt; 5; i++) {
+  console.log(i);
+}</code></pre>
+
+    <h2>Functions</h2>
+    <p>Functions are reusable blocks of code that can be called to perform a specific task.</p>
+    <pre><code>function greet(name) {
+  console.log('Hello, ' + name + '!');
+}
+greet('John');</code></pre>
+
+    <h2>Scope</h2>
+    <p>Scope determines the accessibility or visibility of variables in JavaScript.</p>
+    <pre><code>var x = 10;
+
+function printNumber() {
+  var y = 5;
+  console.log(x + y);
+}
+
+printNumber(); // Output: 15
+console.log(y); // Error: y is not defined</code></pre>
+
+    <h2>Methods</h2>
+    <p>Methods are functions that are associated with objects.</p>
+    <pre><code>var person = {
+  name: 'John',
+  age: 25,
+  greet: function() {
+    console.log('Hello, my name is ' + this.name + '.');
+  }
+};
+
+person.greet(); // Output: Hello, my name is John.</code></pre>
+
+    <h2>Objects</h2>
+    <p>Objects are used to store multiple values as properties and methods.</p>
+    <pre><code>var person = {
+  name: 'John',
+  age: 25,
+  isStudent: true
+};</code></pre>
+
+    <h2>Object Methods</h2>
+    <p>Object methods are functions that are part of an object.</p>
+    <pre><code>var person = {
+  name: 'John',
+  age: 25,
+  greet: function() {
+    console.log('Hello, my name is ' + this.name + '.');
+  }
+};
+
+person.greet(); // Output: Hello, my name is John.</code></pre>
+
+    <h2>Object "this"</h2>
+    <p>The <code>this</code> keyword refers to the current object, and it is used to access properties and methods
+        within an object.</p>
+    <pre><code>var person = {
+  name: 'John',
+  age: 25,
+  greet: function() {
+    console.log('Hello, my name is ' + this.name + '.');
+  }
+};
+
+person.greet(); // Output: Hello, my name is John.</code></pre>
+
+    <h2>Window Object</h2>
+    <p>The <code>window</code> object represents the browser's window and provides access to various properties and
+        methods.</p>
+    <pre><code>console.log(window.innerWidth); // Output: the inner width of the browser window</code></pre>
+
+    <h2>Traverse the DOM</h2>
+    <p>You can traverse the Document Object Model (DOM) to access and manipulate HTML elements.</p>
+    <pre><code>var element = document.getElementById('myElement');
+console.log(element.innerHTML); // Output: the HTML content of the element with id "myElement"</code></pre>
+
+    <h2>Setting Attributes</h2>
+    <p>You can set attributes of HTML elements using JavaScript.</p>
+    <pre><code>var element = document.getElementById('myElement');
+element.setAttribute('class', 'highlighted');</code></pre>
+
+    <h2>Create and Append Elements</h2>
+    <p>You can create new HTML elements and append them to the DOM.</p>
+    <pre><code>var newElement = document.createElement('div');
+newElement.innerHTML = 'New element';
+document.body.appendChild(newElement);</code></pre>
+
+    <h2>Timers and Intervals</h2>
+    <p>JavaScript provides timers and intervals for executing code at specific time intervals.</p>
+    <pre><code>setTimeout(function() {
+  console.log('Delayed message');
+}, 2000);
+
+setInterval(function() {
+  console.log('Repeated message');
+}, 1000);</code></pre>
+
+    <h2>Event Listeners</h2>
+    <p>You can add event listeners to HTML elements to respond to user interactions.</p>
+    <pre><code>var button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+  console.log('Button clicked');
+});</code></pre>
+
+    <h2>Preventing Default</h2>
+    <p>You can prevent the default behavior of an event using the <code>preventDefault()</code> method.</p>
+    <pre><code>var link = document.getElementById('myLink');
+link.addEventListener('click', function(event) {
+  event.preventDefault();
+  console.log('Link clicked');
+});</code></pre>
+
+    <h2>Keyboard Events</h2>
+    <p>You can handle keyboard events such as key press, key down, and key up.</p>
+    <pre><code>document.addEventListener('keydown', function(event) {
+  console.log('Key pressed: ' + event.key);
+});</code></pre>
+
+    <h2>Event Bubbling</h2>
+    <p>Event bubbling refers to the propagation of an event through nested HTML elements.</p>
+    <pre><code>document.addEventListener('click', function(event) {
+  console.log('Clicked on: ' + event.target.tagName);
+});</code></pre>
+
+    <h2>Data Attributes</h2>
+    <p>Data attributes allow you to store custom data within HTML elements.</p>
+    <pre><code>&lt;div id="myElement" data-user-id="123"&gt;&lt;/div&gt;
+  
+var element = document.getElementById('myElement');
+console.log(element.getAttribute('data-user-id')); // Output: 123</code></pre>
+
+    <h2>Local Storage</h2>
+    <p>The local storage API allows you to store data in the browser's local storage.</p>
+    <pre><code>localStorage.setItem('username', 'John');
+console.log(localStorage.getItem('username')); // Output: John</code></pre>
+
+    <h2>Local Storage Objects</h2>
+    <p>You can store JavaScript objects in the local storage by converting them to JSON strings.</p>
+    <pre><code>var user = {
+  name: 'John',
+  age: 25
+};
+
+localStorage.setItem('user', JSON.stringify(user));
+var storedUser = JSON.parse(localStorage.getItem('user'));
+console.log(storedUser.name); // Output: John</code></pre>
+
+    <h2>Local Storage Todos</h2>
+    <p>You can use local storage to store and retrieve a list of to-dos.</p>
+    <pre><code>var todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+function addTodo() {
+  var todo = document.getElementById('todoInput').value;
+  todos.push(todo);
+  localStorage.setItem('todos', JSON.stringify(todos));
+  displayTodos();
+}
+
+function displayTodos() {
+  var todoList = document.getElementById('todoList');
+  todoList.innerHTML = '';
+  for (var i = 0; i < todos.length; i++) {
+    var todoItem = document.createElement('li');
+    todoItem.textContent = todos[i];
+    todoList.appendChild(todoItem);
+  }
+}
+
+displayTodos();</code></pre>
+
+    <!-- Add the necessary HTML elements for input and list display -->
+
+</body>
+
+</html>
